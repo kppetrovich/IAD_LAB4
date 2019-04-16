@@ -151,7 +151,8 @@ form .inputGroup1 .helper1 {
 }
 form .inputGroup1.focusWithText .helper {
   /*input[type='email']:focus + .helper {*/
-  -webkit-transform: translate(1.4em, 2em) scale(0.65);
-  transform: translate(1.4em, 2em) scale(0.65);
+  -webkit-transform: translate(1.4em, 1em) scale(0.65);
+  transform: translate(1.4em, 1em) scale(0.65);
   opacity: 1;
 }
+
