@@ -120,9 +120,9 @@
   </div>
 
   <div class="inputGroup inputGroup1">
-    <label for="email">Email</label>
+    <label for="email">Login</label>
     <input type="text" id="email" name="email" [(ngModel)]="email" class="email" maxlength="256" required/>
-    <p class="helper helper1">email@domain.com</p>
+    <p class="helper helper1">Your login</p>
     <span class="indicator"></span>
   </div>
   <div class="inputGroup inputGroup2">
@@ -131,5 +131,8 @@
   </div>
   <div class="inputGroup inputGroup3">
     <button id="login" type="submit" [disabled]="loginForm.invalid">Log in</button>
+  </div>
+  <div class="inputGroup inputGroup3">
+    <button id="signUp" type="submit" [disabled]="loginForm.invalid">Sing Up</button>
   </div>
 </form>
