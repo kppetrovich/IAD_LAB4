@@ -10,4 +10,6 @@ public interface HistoryEntryRepository extends JpaRepository<HistoryEntry, Long
 
     List<HistoryEntry> findAllByOwner(User owner);
 
+    void removeAllByOwner(User owner);
+
 }

@@ -36,4 +36,9 @@ public class GraphController {
         return graphService.getHistory(principal.getName());
     }
 
+    @PostMapping("/clear-history")
+    public void clearHistory(Principal principal) {
+        graphService.clearHistory(principal.getName());
+    }
+
 }

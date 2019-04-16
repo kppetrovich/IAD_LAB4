@@ -36,8 +36,27 @@ public class GraphService {
         return historyEntryRepository.findAllByOwner(owner);
     }
 
+    public void clearHistory(String username) {
+        User owner = userRepository.findByUsername(username);
+        historyEntryRepository.removeAllByOwner(owner);
+    }
+
     private boolean isInArea(Point point, double r) {
-        // TODO
-        return false;
+        double x = point.getX();
+        double y = point.getY();
+
+        if (x <= 0 && y <= 0 && sqr(r / 2) >= sqr(x) + sqr(y)) {
+            return true;
+        }
+
+        if (x >= 0 && y <= 0 && x <= r / 2 && Math.abs(y) <= r) {
+            return true;
+        }
+
+        return (x >= 0 && y >= 0 && y <= ((-x / 2) + r / 2));
+    }
+
+    private double sqr(double v) {
+        return v * v;
     }
 }

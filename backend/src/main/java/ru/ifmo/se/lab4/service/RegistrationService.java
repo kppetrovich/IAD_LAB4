@@ -22,7 +22,7 @@ public class RegistrationService {
 
     public RegistrationResponseDto registerUser(User user) {
         User received = userRepository.findByUsername(user.getUsername());
-        if (received != null) {
+        if (received != null) { // FIXME take off the messages
             return new RegistrationResponseDto(false, "Username is already taken");
         }
 

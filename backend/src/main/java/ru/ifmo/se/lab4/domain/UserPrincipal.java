@@ -1,11 +1,11 @@
 package ru.ifmo.se.lab4.domain;
 
-import lombok.Data;
+import lombok.Getter;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Collections;
 
-@Data
+@Getter
 public class UserPrincipal extends org.springframework.security.core.userdetails.User {
 
     private final User user;
