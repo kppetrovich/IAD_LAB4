@@ -26,4 +26,9 @@ public class HistoryEntry {
     @JoinColumn(name = "owner_id", nullable = false)
     private User owner;
 
+    public HistoryEntry(Point point, double r) {
+        this.point = point;
+        this.r = r;
+    }
+
 }
