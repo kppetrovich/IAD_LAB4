@@ -13,6 +13,7 @@ import static org.junit.Assert.assertNotEquals;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserRepositoryTest {
+
     @Autowired
     UserRepository userRepository;
 
@@ -28,4 +29,5 @@ public class UserRepositoryTest {
         assertEquals(username, received.getUsername());
         assertEquals(password, received.getPassword());
     }
+
 }
