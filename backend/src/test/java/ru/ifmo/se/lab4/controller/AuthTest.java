@@ -1,4 +1,4 @@
-package ru.ifmo.se.lab4.repository;
+package ru.ifmo.se.lab4.controller;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -23,7 +23,7 @@ public class AuthTest {
     }
 
     @Test
-    public void registerAndLoginTest() {
+    public void registerTest() {
         RequestSpecification request = RestAssured.given();
         request.header("Content-Type", "application/json");
         request.body(new User("username", "password"));
