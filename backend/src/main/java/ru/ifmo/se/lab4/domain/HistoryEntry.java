@@ -1,13 +1,11 @@
 package ru.ifmo.se.lab4.domain;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "history_entry")
 @NoArgsConstructor
@@ -25,6 +23,7 @@ public class HistoryEntry {
     private double r;
 
     @ManyToOne
+    @JoinColumn(name = "owner_id", nullable = false)
     private User owner;
 
 }

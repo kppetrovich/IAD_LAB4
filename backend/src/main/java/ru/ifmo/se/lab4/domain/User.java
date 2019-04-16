@@ -1,27 +1,33 @@
 package ru.ifmo.se.lab4.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
 @Entity
-@Table(name = "user")
-public class User extends org.springframework.security.core.userdetails.User {
+@Table(name = "usr")
+public class User {
 
     @Id
     @GeneratedValue
     private Long id;
 
+    private String username;
+
+    private String password;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "owner")
     private List<HistoryEntry> history;
 
     public User(String username, String password) {
-        super(username, password, Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
+        this.username = username;
+        this.password = password;
+        history = new ArrayList<>();
     }
 
 }
