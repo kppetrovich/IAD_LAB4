@@ -133,6 +133,10 @@
     <button id="login" type="submit" [disabled]="loginForm.invalid">Log in</button>
   </div>
   <div class="inputGroup inputGroup3">
-    <button id="signUp" type="submit" [disabled]="loginForm.invalid">Sing Up</button>
+    <button id="signUp" type="submit"(click)="signUp()">Sing Up</button>
   </div>
 </form>
+<nav>
+  <a routerLink="/main">main</a>
+</nav>
+<router-outlet></router-outlet>
