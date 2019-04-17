@@ -201,14 +201,14 @@ function initialize() {
 
   email = document.querySelector('#email'), password = document.querySelector('#password'), mySVG = document.querySelector('.svgContainer'), armL = document.querySelector('.armL'), armR = document.querySelector('.armR'), eyeL = document.querySelector('.eyeL'), eyeR = document.querySelector('.eyeR'), nose = document.querySelector('.nose'), mouth = document.querySelector('.mouth'), mouthBG = document.querySelector('.mouthBG'), mouthSmallBG = document.querySelector('.mouthSmallBG'), mouthMediumBG = document.querySelector('.mouthMediumBG'), mouthLargeBG = document.querySelector('.mouthLargeBG'), mouthMaskPath = document.querySelector('#mouthMaskPath'), mouthOutline = document.querySelector('.mouthOutline'), tooth = document.querySelector('.tooth'), tongue = document.querySelector('.tongue'), chin = document.querySelector('.chin'), face = document.querySelector('.face'), eyebrow = document.querySelector('.eyebrow'), outerEarL = document.querySelector('.earL .outerEar'), outerEarR = document.querySelector('.earR .outerEar'), earHairL = document.querySelector('.earL .earHair'), earHairR = document.querySelector('.earR .earHair'), hair = document.querySelector('.hair');
   caretPos, curEmailIndex, screenCenter, svgCoords, eyeMaxHorizD = 20, eyeMaxVertD = 10, noseMaxHorizD = 23, noseMaxVertD = 10, dFromC, eyeDistH, eyeLDistV, eyeRDistV, eyeDistR, mouthStatus = "small";
-
+if(email&&password&&armL&&armR){
   email.addEventListener('focus', onEmailFocus);
   email.addEventListener('blur', onEmailBlur);
   email.addEventListener('input', onEmailInput);
   password.addEventListener('focus', onPasswordFocus);
   password.addEventListener('blur', onPasswordBlur);
   TweenMax.set(armL, { x: -93, y: 220, rotation: 105, transformOrigin: "top left" });
-  TweenMax.set(armR, { x: -93, y: 220, rotation: -105, transformOrigin: "top right" });
+  TweenMax.set(armR, { x: -93, y: 220, rotation: -105, transformOrigin: "top right" });}
 }
 
 window.initialize = initialize;
