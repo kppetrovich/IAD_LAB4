@@ -5,7 +5,8 @@
   Выполнили: <br>
   Зайцев Артем и Куркин Павел
 </div>
-<div >
+
+<div class="sec">
   <div>
   <svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
     <rect x="0" y="0" width="250" height="250" fill="white"/>
@@ -67,8 +68,14 @@
 <p>Выберите R:</p>
 <p-spinner size="30" [(ngModel)]="r" [min]="-5" [max]="3"></p-spinner>
   </div>
-</div>
+  <div class="buttons">
+    <button pButton type="button" label="Cheack"></button>
+    <button pButton type="button" label="Clear"></button>
+    <button pButton type="button" label="Back"></button>
+  </div>
 
+</div>
+</div>
 
 <nav>
   <a routerLink="/login">login</a>

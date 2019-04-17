@@ -7,6 +7,8 @@ import {SpinnerModule} from 'primeng/spinner';
 import {InputTextModule} from 'primeng/inputtext';
 
 import { AppComponent } from './app.component';
+import {ButtonModule} from 'primeng/button';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { GraphComponent } from './graph/graph.component';
@@ -25,7 +27,8 @@ import { LoginComponent } from './login/login.component';
     RouterModule,
     AppRoutingModule,
     SpinnerModule,
-    InputTextModule
+    InputTextModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

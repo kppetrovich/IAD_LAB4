@@ -15,16 +15,11 @@ body {
 }
 
 .header {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   display: block;
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
   background-color: #FFF;
-  margin: 0;
+  margin-bottom: 30px;
   padding: 2.25em;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -33,14 +28,19 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 .cont {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  min-height: 568px;
+  min-width: 320px;
+}
+
+.sec {
   display: block;
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
   background-color: #FFF;
   margin: 0;
   padding: 2.25em;
@@ -50,7 +50,6 @@ body {
   border-radius: .5em;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
 form {
   position: absolute;
   top: 50%;
@@ -191,5 +190,13 @@ form .inputGroup1.focusWithText .helper {
   -webkit-transform: translate(1.4em, 1em) scale(0.65);
   transform: translate(1.4em, 1em) scale(0.65);
   opacity: 1;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons button {
+  width: 33.3%;
 }
 
