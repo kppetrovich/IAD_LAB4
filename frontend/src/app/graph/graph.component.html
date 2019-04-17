@@ -1,6 +1,17 @@
-<p>
-  graph works!
-</p>
+<div>
+
+<p>Выберите X:</p>
+<p-spinner size="30" [(ngModel)]="x" [min]="-5" [max]="3"></p-spinner>
+
+<p>Введите Y:</p>
+<input id="input" type="text" size="30" pInputText [(ngModel)]="y">
+
+<p>Выберите R:</p>
+<p-spinner size="30" [(ngModel)]="r" [min]="-5" [max]="3"></p-spinner>
+
+</div>
+
+
 <nav>
   <a routerLink="/login">login</a>
 </nav>

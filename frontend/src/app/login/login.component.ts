@@ -47,6 +47,6 @@ export class LoginComponent{
       body: JSON.stringify(form)
     }).then(res=>res.json())
     return false;
-  }
+  } 
 
 }
