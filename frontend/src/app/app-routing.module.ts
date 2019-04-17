@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MainComponent} from "./main/main.component";
+import {GraphComponent} from "./graph/graph.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes : Routes = [
-  { path: 'main', component: MainComponent}
+  { path: 'graph', component: GraphComponent, data: {
+      page: 'login'
+    }},
+  { path: 'login', component: LoginComponent, data: {
+      page: 'graph'
+    }},
+  {path: '**', redirectTo: '/login'},
 ]
 
 @NgModule({

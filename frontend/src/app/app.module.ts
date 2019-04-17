@@ -6,13 +6,16 @@ import { CommonModule } from '@angular/common';
 
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
+
 import { AppRoutingModule } from './app-routing.module';
+import { GraphComponent } from './graph/graph.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    GraphComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
