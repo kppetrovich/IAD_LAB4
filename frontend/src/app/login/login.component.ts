@@ -25,7 +25,7 @@ export class LoginComponent{
       formBody.push(encodedKey + "=" + encodedValue);
     }
     let formBody1  =  formBody.join("&");
-    fetch('http://192.168.0.107:27525/login', {
+    fetch('http://localhost:27525/login', {
       method: 'post',
       redirect: 'follow',
       headers: {
@@ -39,7 +39,7 @@ export class LoginComponent{
       'username': this.email,
       'password': this.password
     };
-    fetch('http://192.168.0.107:27525/registration', {
+    fetch('http://localhost:27525/registration', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
