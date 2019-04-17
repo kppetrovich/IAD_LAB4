@@ -1,13 +1,11 @@
-import { Component } from '@angular/core';
-
-import '../assets/login-animation.js';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent {
+export class LoginComponent{
   email: string;
   password: string;
 
@@ -37,10 +35,10 @@ export class AppComponent {
     })
   }
   signUp(){
-  var form= {
-    'username': this.email,
-    'password': this.password
-  };
+    var form= {
+      'username': this.email,
+      'password': this.password
+    };
     fetch('http://192.168.0.107:27525/registration', {
       method: 'post',
       headers: {
@@ -50,4 +48,5 @@ export class AppComponent {
     }).then(res=>res.json())
     return false;
   }
+
 }
