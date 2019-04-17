@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class GraphComponent implements OnInit {
 
   constructor() { }
-
+  x: number;
+  y: number;
+  r: number;
   ngOnInit() {
   }
 
