@@ -1,5 +1,6 @@
 package ru.ifmo.se.lab4.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +22,7 @@ public class User {
 
     private String password;
 
+    @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "owner")
     private List<HistoryEntry> history;
 

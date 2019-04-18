@@ -1,5 +1,6 @@
 package ru.ifmo.se.lab4.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -22,6 +23,7 @@ public class HistoryEntry {
 
     private double r;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "owner_id", nullable = false)
     private User owner;

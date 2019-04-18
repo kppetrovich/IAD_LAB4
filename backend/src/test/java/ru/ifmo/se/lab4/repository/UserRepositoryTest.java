@@ -19,8 +19,8 @@ public class UserRepositoryTest {
 
     @Test
     public void saveAndFindTest() {
-        String username = "username";
-        String password = "password";
+        String username = "usernameRepoTest";
+        String password = "passwordRepoTest";
         User user = new User(username, password);
         userRepository.save(user);
 

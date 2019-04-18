@@ -18,15 +18,14 @@ public class AuthTest {
 
     @BeforeClass
     public static void init() {
-        RestAssured.baseURI = "http://localhost";
-        RestAssured.port = 27525;
+        RestAssured.baseURI = Data.BASE_URI;
+        RestAssured.port = Data.PORT;
     }
 
-    @Test
-    public void registerTest() {
+    public void register(String username, String password) {
         RequestSpecification request = RestAssured.given();
         request.header("Content-Type", "application/json");
-        request.body(new User("username", "password"));
+        request.body(new User(username, password));
 
         Response response = request.post("/registration");
         assertEquals(200, response.getStatusCode());
