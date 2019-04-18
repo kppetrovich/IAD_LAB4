@@ -15,13 +15,14 @@ import {headersToString} from 'selenium-webdriver/http';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
+export class LoginComponent {
   constructor(
     private _router: Router,
     private api: ApiService,
     private auth: AuthService,
   ) {
   }
+
   email: string;
   password: string;
   submitted = false;
@@ -34,53 +35,54 @@ export class LoginComponent{
   ngAfterViewInit() {
     (window as any).initialize();
   }
+
   newUser() {
     this.model = new User(this.email, this.password);
   }
 
-  public login() {
-    this._router.navigate(['/graph']);
-    this.api
-      .signIn(this.model.username, this.model.password)
-      .subscribe(
-        (response) => {
-          this.auth.doSignIn(
-            response.username,
-            response.password,
-          );
+   public login() {
+     this._router.navigate(['/graph']);
+     this.api
+       .signIn(this.model.username, this.model.password)
+       .subscribe(
+         (response) => {
+           this.auth.doSignIn(
+             response.username,
+             response.password,
+           );
 
-          this._router.navigate(['/graph']);
-        },
-        (error) => {
-          if (error.status == 418) {
-            this.notExist = true;
-          } else {
-            this.failed = true;
-          }
-        }
-      );
-  }
-  public signUp() {
-    this.api
-      .signUp(this.model.username, this.model.password)
-      .subscribe(
-        (response) => {
-          if (response != null) {
-            this.auth.doSignIn(
-              response.username,
-              response.password,
-            );
-          } else {
-            this.busy = true;
-          }
-          this._router.navigate(['/graph']);
-        },
-        (error) => {
-          this.failed = true;
-        }
-      );
-  }
-}
+           this._router.navigate(['/graph']);
+         },
+         (error) => {
+           if (error.status == 418) {
+             this.notExist = true;
+           } else {
+             this.failed = true;
+           }
+         }
+       );
+   }
+   public signUp() {
+     this.api
+       .signUp(this.model.username, this.model.password)
+       .subscribe(
+         (response) => {
+           if (response != null) {
+             this.auth.doSignIn(
+               response.username,
+               response.password,
+             );
+           } else {
+             this.busy = true;
+           }
+           this._router.navigate(['/graph']);
+         },
+         (error) => {
+           this.failed = true;
+         }
+       );
+   }
+ }
 
 /*login(){
   var details = {

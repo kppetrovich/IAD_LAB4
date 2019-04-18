@@ -82,18 +82,8 @@ export class ApiService {
     // .catch(this.handleError);
   }
 
-  /*public logout() {
-    const headers = new HttpHeaders({
-      'Authorization': `Basic ${usernamePasswordBasic}`,
-      'cache-control': 'no-cache'
-    });
-    return this.http
-      .post(URL + '/auth/logout', null, {headers: headers})
-      .map(response => null)
-      .catch(this.handleError);
-  }*/
 
-  public signUp(username: string, password: string): Observable<User> {
+public signUp(username: string, password: string): Observable<User> {
     var form= {
       'username': username,
       'password': password
@@ -112,4 +102,4 @@ export class ApiService {
 
 const URL = environment.apiUrl;
 
-let usernamePasswordBasic: string;
+

@@ -1,8 +1,8 @@
 export class Dot {
   constructor(
-    public x: string,
+    public x: number,
     public y: number,
-    public r: string,
+    public r: number,
     public result: boolean
   ) {
   }
