@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Dot} from "./Dot";
 @Component({
   selector: 'app-graph',
   templateUrl: './graph.component.html',
@@ -12,6 +12,13 @@ export class GraphComponent implements OnInit {
   y: number;
   r: number;
   ngOnInit() {
+
+  }
+  getCoord(event) {
+    const dim = document.querySelector('svg').getBoundingClientRect();
+    const x = event.clientX - dim.left;
+    const y = event.clientY - dim.top;
+
   }
 
 }

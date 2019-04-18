@@ -8,7 +8,7 @@
 
 <div class="sec">
   <div>
-  <svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+  <svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" (click)="getCoord($event)">
     <rect x="0" y="0" width="250" height="250" fill="white"/>
     <!-- part circle -->
     <circle r="50" cx="125" cy="125" fill="blue"/>
@@ -56,6 +56,8 @@
     <text x="105" y="75">R/2</text>
     <text x="105" y="175">-R/2</text>
     <text x="110" y="225">-R</text>
+
+
   </svg>
   </div>
   <div>
